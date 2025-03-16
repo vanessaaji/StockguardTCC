@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Desativar Promoção</h2>
+<p style="margin: 10px;">Tem certeza que deseja desativar a promoção do produto "{{ promocao.produto.nome }}"?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger" style="margin: 10px;">Desativar</button>
+    <a href="{% url 'lista_promocoes' %}" class="btn btn-secondary">Cancelar</a>
+</form>
+{% endblock %}

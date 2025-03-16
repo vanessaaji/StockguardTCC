@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Promoções</h2>
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered shadow-sm table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>Produto</th>
+                    <th>Desconto (%)</th>
+                    <th>Dias Antes do Vencimento</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for promocao in promocoes %}
+                <tr>
+                    <td>{{ promocao.produto.nome }}</td>
+                    <td>{{ promocao.porcentagem_desconto }}</td>
+                    <td>{{ promocao.dias_antes_vencimento }}</td>
+                    <td>
+                        <a href="{% url 'editar_promocao' promocao.id %}" class="btn btn-sm btn-warning">Editar</a>
+                        <a href="{% url 'excluir_promocao' promocao.id %}" class="btn btn-sm btn-danger">Desativar</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center mt-4">
+        <a href="{% url 'adicionar_promocao' %}" class="btn btn-success">Adicionar Promoção</a>
+    </div>
+</div>
+{% endblock %}

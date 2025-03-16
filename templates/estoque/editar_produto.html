@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4 custom-title" style="color: darkslategrey;">Editar Produto</h2>
+
+    <!-- Formulário de edição -->
+    <div class="card mx-auto" style="max-width: 600px;">
+        <div class="card-header text-white">
+            <h3 class="card-title mb-0">Editar Produto</h3>
+        </div>
+        <div class="card-body">
+            <form method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    {{ form.as_p }}
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-success btn-lg">
+                        <i class="fas fa-save"></i> Salvar
+                    </button>
+                    <a href="{% url 'lista_produtos' %}" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-arrow-left"></i> Voltar
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

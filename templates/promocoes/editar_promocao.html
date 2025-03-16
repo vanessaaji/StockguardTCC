@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Editar Promoção</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary" style="margin: 10px;">Salvar</button>
+</form>
+<a href="{% url 'lista_promocoes' %}" class="btn btn-secondary" style="margin-left: 10px;">Voltar</a>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 style="padding: 20px; color: darkslategrey;" >Adicionar Produto</h2>
+<form method="post" style="padding: 10px">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary" >Salvar</button>
+</form>
+<a href="{% url 'lista_produtos' %}" class="btn btn-secondary" style="margin:5px;">Voltar</a>
+{% endblock %}

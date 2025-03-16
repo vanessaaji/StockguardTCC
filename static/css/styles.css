@@ -1,0 +1,319 @@
+/* Estilos globais */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #fffaf0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: darkslategrey !important;
+}
+
+.navbar-brand, .nav-link {
+    color: bisque !important;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    color: #ffcc99 !important;
+}
+
+/* Conteúdo principal */
+main {
+    flex: 1;
+    padding: 20px 0;
+}
+
+/* Rodapé */
+.footer {
+    background-color: rgb(38, 63, 63) !important;
+    color: bisque;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Estilos para cards */
+.card {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: darkslategrey;
+    color: bisque;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Botões */
+.btn-primary {
+    background-color: darkslategrey;
+    border-color: darkslategrey;
+}
+
+.btn-primary:hover {
+    background-color: #2f4f4f;
+    border-color: #2f4f4f;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+/* Estilos específicos para a página de promoções */
+.promocoes-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.promocoes-container h2 {
+    color: darkslategrey;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.table-centered {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-centered th,
+.table-centered td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-centered th {
+    background-color: darkslategrey;
+    color: bisque;
+    font-weight: bold;
+}
+
+.table-centered tr:hover {
+    background-color: #f8f9fa;
+}
+
+.table-centered td a {
+    color: darkslategrey;
+    text-decoration: none;
+    margin-right: 10px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.table-centered td a:hover {
+    color: #ffcc99;
+}
+
+.btn-add-promocao {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #218838 !important;
+    border-color: #1e7e34 !important;
+    color: #fffaf0 !important;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn-add-promocao:hover {
+    background-color: #2f4f4f;
+}
+
+/* Estilos para o dashboard */
+.dashboard-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-card .card-header {
+    border-radius: 10px 10px 0 0;
+}
+
+.list-group-item {
+    border: none;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.list-group-item:hover {
+    background-color: #f8f9fa;
+}
+
+.badge {
+    font-size: 0.9rem;
+    padding: 0.5em 0.75em;
+}
+
+/* Estilos específicos para o aplicativo de doações */
+.doacoes-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.doacoes-container h2 {
+    color: darkslategrey;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.table-doacoes {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-doacoes th,
+.table-doacoes td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-doacoes th {
+    background-color: darkslategrey;
+    color: bisque;
+    font-weight: bold;
+}
+
+.table-doacoes tr:hover {
+    background-color: #f8f9fa;
+}
+
+.btn-add-doacao {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    border-color: #28a745;
+    color: #fffaf0;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn-add-doacao:hover {
+    background-color: #218838;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .promocoes-container, .doacoes-container {
+        padding: 10px;
+    }
+
+    .table-centered, .table-doacoes {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .promocoes-container h2, .doacoes-container h2 {
+        font-size: 24px;
+    }
+
+    .btn-add-promocao, .btn-add-doacao {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+/* Estilos para a tabela de promoções (igual às tabelas de estoque e doações) */
+.table-promocoes {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-promocoes th,
+.table-promocoes td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-promocoes th {
+    background-color: darkslategrey;
+    color: bisque;
+    font-weight: bold;
+}
+
+.table-promocoes tr:hover {
+    background-color: #f8f9fa;
+}
+
+.table-promocoes td a {
+    color: darkslategrey;
+    text-decoration: none;
+    margin-right: 10px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.table-promocoes td a:hover {
+    color: #ffcc99;
+}
