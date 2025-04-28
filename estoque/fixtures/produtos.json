@@ -1,0 +1,783 @@
+[
+
+    {
+        "model": "estoque.produto",
+        "pk": 1,
+        "fields": {
+            "nome": "Arroz Branco Tipo 1 5kg",
+            "categoria": "Mercearia",
+            "validade": "2026-05-15",
+            "quantidade": 50,
+            "fornecedor": "Camil",
+            "preco_unitario": "22.90"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 2,
+        "fields": {
+            "nome": "Feijão Carioca 1kg",
+            "categoria": "Mercearia",
+            "validade": "2026-08-20",
+            "quantidade": 40,
+            "fornecedor": "Kicaldo",
+            "preco_unitario": "8.99"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 3,
+        "fields": {
+            "nome": "Óleo de Soja 900ml",
+            "categoria": "Mercearia",
+            "validade": "2026-03-30",
+            "quantidade": 35,
+            "fornecedor": "Liza",
+            "preco_unitario": "7.49"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 4,
+        "fields": {
+            "nome": "Leite UHT Integral 1L",
+            "categoria": "Laticínios",
+            "validade": "2026-02-28",
+            "quantidade": 60,
+            "fornecedor": "Parmalat",
+            "preco_unitario": "4.79"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 5,
+        "fields": {
+            "nome": "Café em Pó Tradicional 500g",
+            "categoria": "Mercearia",
+            "validade": "2026-11-15",
+            "quantidade": 30,
+            "fornecedor": "Melitta",
+            "preco_unitario": "14.90"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 6,
+        "fields": {
+            "nome": "Açúcar Refinado 1kg",
+            "categoria": "Mercearia",
+            "validade": "2026-09-10",
+            "quantidade": 45,
+            "fornecedor": "União",
+            "preco_unitario": "5.49"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 7,
+        "fields": {
+            "nome": "Macarrão Espaguete 500g",
+            "categoria": "Mercearia",
+            "validade": "2026-07-25",
+            "quantidade": 55,
+            "fornecedor": "Adria",
+            "preco_unitario": "3.99"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 8,
+        "fields": {
+            "nome": "Farinha de Trigo 1kg",
+            "categoria": "Padaria",
+            "validade": "2026-04-18",
+            "quantidade": 40,
+            "fornecedor": "Dona Benta",
+            "preco_unitario": "4.29"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 9,
+        "fields": {
+            "nome": "Sal Refinado 1kg",
+            "categoria": "Mercearia",
+            "validade": "2026-12-31",
+            "quantidade": 30,
+            "fornecedor": "Cisne",
+            "preco_unitario": "2.89"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 10,
+        "fields": {
+            "nome": "Sabão em Pó 1kg",
+            "categoria": "Limpeza",
+            "validade": "2026-10-05",
+            "quantidade": 25,
+            "fornecedor": "OMO",
+            "preco_unitario": "12.90"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 11,
+        "fields": {
+            "nome": "Detergente Líquido 500ml",
+            "categoria": "Limpeza",
+            "validade": "2026-06-15",
+            "quantidade": 40,
+            "fornecedor": "Ypê",
+            "preco_unitario": "2.49"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 12,
+        "fields": {
+            "nome": "Água Mineral 1,5L",
+            "categoria": "Bebidas",
+            "validade": "2026-01-30",
+            "quantidade": 80,
+            "fornecedor": "Crystal",
+            "preco_unitario": "2.99"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 13,
+        "fields": {
+            "nome": "Refrigerante Coca-Cola 2L",
+            "categoria": "Bebidas",
+            "validade": "2026-03-20",
+            "quantidade": 50,
+            "fornecedor": "Coca-Cola",
+            "preco_unitario": "8.99"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 14,
+        "fields": {
+            "nome": "Suco de Laranja Integral 1L",
+            "categoria": "Bebidas",
+            "validade": "2026-02-15",
+            "quantidade": 30,
+            "fornecedor": "Del Valle",
+            "preco_unitario": "6.49"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 15,
+        "fields": {
+            "nome": "Cerveja Heineken Lata 350ml",
+            "categoria": "Bebidas",
+            "validade": "2026-08-30",
+            "quantidade": 120,
+            "fornecedor": "Heineken",
+            "preco_unitario": "4.99"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 16,
+        "fields": {
+            "nome": "Pão de Forma Integral 500g",
+            "categoria": "Padaria",
+            "validade": "2025-12-10",
+            "quantidade": 25,
+            "fornecedor": "Pullman",
+            "preco_unitario": "9.90"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 17,
+        "fields": {
+            "nome": "Biscoito Recheado 130g",
+            "categoria": "Mercearia",
+            "validade": "2026-04-05",
+            "quantidade": 60,
+            "fornecedor": "Trakinas",
+            "preco_unitario": "3.29"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 18,
+        "fields": {
+            "nome": "Margarina 500g",
+            "categoria": "Laticínios",
+            "validade": "2026-01-25",
+            "quantidade": 30,
+            "fornecedor": "Qualy",
+            "preco_unitario": "6.79"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 19,
+        "fields": {
+            "nome": "Queijo Mussarela Fatiado 200g",
+            "categoria": "Laticínios",
+            "validade": "2026-02-10",
+            "quantidade": 25,
+            "fornecedor": "Polenghi",
+            "preco_unitario": "12.50"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 20,
+        "fields": {
+            "nome": "Presunto Cozido 150g",
+            "categoria": "Frios",
+            "validade": "2026-01-15",
+            "quantidade": 20,
+            "fornecedor": "Sadia",
+            "preco_unitario": "8.90"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 21,
+        "fields": {
+            "nome": "Peito de Frango Congelado 1kg",
+            "categoria": "Carnes",
+            "validade": "2026-06-30",
+            "quantidade": 15,
+            "fornecedor": "Seara",
+            "preco_unitario": "18.90"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 22,
+        "fields": {
+            "nome": "Ovos Brancos 30un",
+            "categoria": "Laticínios",
+            "validade": "2025-12-28",
+            "quantidade": 40,
+            "fornecedor": "Granja Mantiqueira",
+            "preco_unitario": "15.99"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 23,
+        "fields": {
+            "nome": "Banana Prata kg",
+            "categoria": "Hortifruti",
+            "validade": "2025-12-05",
+            "quantidade": 35,
+            "fornecedor": "Fazenda São Paulo",
+            "preco_unitario": "4.99"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 24,
+        "fields": {
+            "nome": "Maçã Argentina kg",
+            "categoria": "Hortifruti",
+            "validade": "2026-01-20",
+            "quantidade": 30,
+            "fornecedor": "Frutas do Vale",
+            "preco_unitario": "9.90"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 25,
+        "fields": {
+            "nome": "Tomate Carmem kg",
+            "categoria": "Hortifruti",
+            "validade": "2025-12-15",
+            "quantidade": 25,
+            "fornecedor": "Horta Fresca",
+            "preco_unitario": "6.49"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 26,
+        "fields": {
+            "nome": "Batata Inglesa kg",
+            "categoria": "Hortifruti",
+            "validade": "2026-01-10",
+            "quantidade": 50,
+            "fornecedor": "Agropecuária Santa Rita",
+            "preco_unitario": "3.99"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 27,
+        "fields": {
+            "nome": "Cebola kg",
+            "categoria": "Hortifruti",
+            "validade": "2026-02-05",
+            "quantidade": 40,
+            "fornecedor": "Horta do Interior",
+            "preco_unitario": "4.29"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 28,
+        "fields": {
+            "nome": "Desinfetante 2L",
+            "categoria": "Limpeza",
+            "validade": "2026-07-15",
+            "quantidade": 20,
+            "fornecedor": "Pinho Sol",
+            "preco_unitario": "10.90"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 29,
+        "fields": {
+            "nome": "Amaciante de Roupas 2L",
+            "categoria": "Limpeza",
+            "validade": "2026-05-20",
+            "quantidade": 25,
+            "fornecedor": "Comfort",
+            "preco_unitario": "14.50"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 30,
+        "fields": {
+            "nome": "Papel Higiênico 30m",
+            "categoria": "Higiene",
+            "validade": "2026-09-30",
+            "quantidade": 60,
+            "fornecedor": "Neve",
+            "preco_unitario": "12.99"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 31,
+        "fields": {
+            "nome": "Iogurte Natural 1kg",
+            "categoria": "Laticínios",
+            "validade": "2025-04-10",
+            "quantidade": 20,
+            "fornecedor": "Danone",
+            "preco_unitario": "11.90"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 32,
+        "fields": {
+            "nome": "Requeijão Cremoso 200g",
+            "categoria": "Laticínios",
+            "validade": "2025-04-25",
+            "quantidade": 25,
+            "fornecedor": "Catupiry",
+            "preco_unitario": "8.49"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 33,
+        "fields": {
+            "nome": "Mussarela Fatiada 150g",
+            "categoria": "Frios",
+            "validade": "2025-05-05",
+            "quantidade": 18,
+            "fornecedor": "Tirolez",
+            "preco_unitario": "10.99"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 34,
+        "fields": {
+            "nome": "Salsicha Hot Dog 500g",
+            "categoria": "Frios",
+            "validade": "2025-05-20",
+            "quantidade": 15,
+            "fornecedor": "Perdigão",
+            "preco_unitario": "9.99"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 35,
+        "fields": {
+            "nome": "Mortadela Premium 200g",
+            "categoria": "Frios",
+            "validade": "2025-06-01",
+            "quantidade": 12,
+            "fornecedor": "Sadia",
+            "preco_unitario": "7.50"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 36,
+        "fields": {
+            "nome": "Leite Condensado 395g",
+            "categoria": "Mercearia",
+            "validade": "2025-06-15",
+            "quantidade": 30,
+            "fornecedor": "Nestlé",
+            "preco_unitario": "6.20"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 37,
+        "fields": {
+            "nome": "Creme de Leite 200g",
+            "categoria": "Mercearia",
+            "validade": "2025-06-30",
+            "quantidade": 25,
+            "fornecedor": "Pirancajuba",
+            "preco_unitario": "3.99"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 38,
+        "fields": {
+            "nome": "Chocolate em Pó 400g",
+            "categoria": "Mercearia",
+            "validade": "2025-07-10",
+            "quantidade": 20,
+            "fornecedor": "Nescau",
+            "preco_unitario": "8.90"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 39,
+        "fields": {
+            "nome": "Achocolatado 300g",
+            "categoria": "Mercearia",
+            "validade": "2025-07-25",
+            "quantidade": 22,
+            "fornecedor": "Toddy",
+            "preco_unitario": "7.49"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 40,
+        "fields": {
+            "nome": "Biscoito Maizena 200g",
+            "categoria": "Mercearia",
+            "validade": "2025-08-05",
+            "quantidade": 35,
+            "fornecedor": "Marilan",
+            "preco_unitario": "4.30"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 41,
+        "fields": {
+            "nome": "Rosquinha de Coco 300g",
+            "categoria": "Mercearia",
+            "validade": "2025-08-20",
+            "quantidade": 18,
+            "fornecedor": "Bauducco",
+            "preco_unitario": "9.99"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 42,
+        "fields": {
+            "nome": "Goiabada Cremosa 400g",
+            "categoria": "Mercearia",
+            "validade": "2025-09-01",
+            "quantidade": 15,
+            "fornecedor": "Bom Sabor",
+            "preco_unitario": "6.79"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 43,
+        "fields": {
+            "nome": "Geleia de Morango 250g",
+            "categoria": "Mercearia",
+            "validade": "2025-09-15",
+            "quantidade": 20,
+            "fornecedor": "Duetto",
+            "preco_unitario": "5.49"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 44,
+        "fields": {
+            "nome": "Mel de Abelha 500g",
+            "categoria": "Mercearia",
+            "validade": "2025-09-30",
+            "quantidade": 12,
+            "fornecedor": "Favo de Ouro",
+            "preco_unitario": "18.90"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 45,
+        "fields": {
+            "nome": "Granola Tradicional 400g",
+            "categoria": "Mercearia",
+            "validade": "2025-10-10",
+            "quantidade": 25,
+            "fornecedor": "Nestlé",
+            "preco_unitario": "12.50"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 46,
+        "fields": {
+            "nome": "Barra de Cereal 30g",
+            "categoria": "Mercearia",
+            "validade": "2025-10-20",
+            "quantidade": 50,
+            "fornecedor": "Nutry",
+            "preco_unitario": "2.99"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 47,
+        "fields": {
+            "nome": "Água de Coco 1L",
+            "categoria": "Bebidas",
+            "validade": "2025-04-15",
+            "quantidade": 30,
+            "fornecedor": "Ducoco",
+            "preco_unitario": "7.90"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 48,
+        "fields": {
+            "nome": "Refrigerante Guaraná 2L",
+            "categoria": "Bebidas",
+            "validade": "2025-05-01",
+            "quantidade": 40,
+            "fornecedor": "Antarctica",
+            "preco_unitario": "7.49"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 49,
+        "fields": {
+            "nome": "Cerveja Skol Lata 350ml",
+            "categoria": "Bebidas",
+            "validade": "2025-06-10",
+            "quantidade": 100,
+            "fornecedor": "Ambev",
+            "preco_unitario": "3.29"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 50,
+        "fields": {
+            "nome": "Suco de Uva Integral 1L",
+            "categoria": "Bebidas",
+            "validade": "2025-07-05",
+            "quantidade": 25,
+            "fornecedor": "Suco do Vale",
+            "preco_unitario": "8.90"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 51,
+        "fields": {
+            "nome": "Água Tônica 1L",
+            "categoria": "Bebidas",
+            "validade": "2025-08-15",
+            "quantidade": 30,
+            "fornecedor": "Schweppes",
+            "preco_unitario": "5.99"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 52,
+        "fields": {
+            "nome": "Energético 250ml",
+            "categoria": "Bebidas",
+            "validade": "2025-09-20",
+            "quantidade": 45,
+            "fornecedor": "Red Bull",
+            "preco_unitario": "9.90"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 53,
+        "fields": {
+            "nome": "Vinho Tinto Seco 750ml",
+            "categoria": "Bebidas",
+            "validade": "2025-10-05",
+            "quantidade": 20,
+            "fornecedor": "Gallo",
+            "preco_unitario": "29.90"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 54,
+        "fields": {
+            "nome": "Sabonete Líquido 200ml",
+            "categoria": "Higiene",
+            "validade": "2025-04-30",
+            "quantidade": 40,
+            "fornecedor": "Protex",
+            "preco_unitario": "6.49"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 55,
+        "fields": {
+            "nome": "Shampoo Anticaspa 200ml",
+            "categoria": "Higiene",
+            "validade": "2025-05-15",
+            "quantidade": 30,
+            "fornecedor": "Clear",
+            "preco_unitario": "14.90"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 56,
+        "fields": {
+            "nome": "Condicionador 200ml",
+            "categoria": "Higiene",
+            "validade": "2025-06-25",
+            "quantidade": 25,
+            "fornecedor": "Seda",
+            "preco_unitario": "12.50"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 57,
+        "fields": {
+            "nome": "Creme Dental 90g",
+            "categoria": "Higiene",
+            "validade": "2025-07-30",
+            "quantidade": 60,
+            "fornecedor": "Colgate",
+            "preco_unitario": "4.99"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 58,
+        "fields": {
+            "nome": "Desodorante Aerosol 150ml",
+            "categoria": "Higiene",
+            "validade": "2025-08-10",
+            "quantidade": 35,
+            "fornecedor": "Rexona",
+            "preco_unitario": "13.90"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 59,
+        "fields": {
+            "nome": "Fralda Descartável P 30un",
+            "categoria": "Bebê",
+            "validade": "2025-09-25",
+            "quantidade": 15,
+            "fornecedor": "Pampers",
+            "preco_unitario": "39.90"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 60,
+        "fields": {
+            "nome": "Lenço Umedecido 48un",
+            "categoria": "Bebê",
+            "validade": "2025-10-15",
+            "quantidade": 20,
+            "fornecedor": "Johnson's",
+            "preco_unitario": "12.49"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 61,
+        "fields": {
+            "nome": "Banana",
+            "categoria": "Frutas",
+            "validade": "2025-03-01",
+            "quantidade": 10,
+            "fornecedor": "Fazenda Feliz",
+            "preco_unitario": "10.00"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 62,
+        "fields": {
+            "nome": "Feijão",
+            "categoria": "Cesta Básica",
+            "validade": "2025-02-27",
+            "quantidade": 5,
+            "fornecedor": "Grãos Nobres",
+            "preco_unitario": "60.00"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 63,
+        "fields": {
+            "nome": "Morango",
+            "categoria": "Frutas",
+            "validade": "2025-03-16",
+            "quantidade": 10,
+            "fornecedor": "Berries do Vale",
+            "preco_unitario": "15.00"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 64,
+        "fields": {
+            "nome": "Maçã",
+            "categoria": "Frutas",
+            "validade": "2025-03-20",
+            "quantidade": 15,
+            "fornecedor": "Pomares Altos",
+            "preco_unitario": "9.50"
+        }
+    },
+    {
+        "model": "estoque.produto",
+        "pk": 65,
+        "fields": {
+            "nome": "Leite em Pó",
+            "categoria": "Laticínios",
+            "validade": "2025-06-30",
+            "quantidade": 8,
+            "fornecedor": "Laticínios Puro",
+            "preco_unitario": "22.90"
+        }
+    }
+]

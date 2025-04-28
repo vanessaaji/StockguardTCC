@@ -1,6 +1,9 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import RegraDesconto
 from .forms import RegraDescontoForm
+from django.contrib import messages
+from django.shortcuts import redirect
+from .utils import gerenciar_promocoes_doacoes
 
 def lista_promocoes(request):
     promocoes = RegraDesconto.objects.filter(ativo=True)
@@ -34,3 +37,8 @@ def excluir_promocao(request, id):
         promocao.save()
         return redirect('lista_promocoes')
     return render(request, 'promocoes/excluir_promocao.html', {'promocao': promocao})
+
+def atualizar_promocoes(request):
+    gerenciar_promocoes_doacoes()
+    messages.success(request, 'Promoções e doações atualizadas!')
+    return redirect('lista_promocoes')  # Volta para a lista de promoções
