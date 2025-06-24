@@ -7,80 +7,88 @@ from estoque.models import Produto
 from doacoes.models import Doacao
 from promocoes.models import RegraDesconto
 
+
 def relatorio_desperdicio(request):
     produtos = Produto.objects.all()
     doacoes = Doacao.objects.all()
-    promocoes = RegraDesconto.objects.filter(ativo=True)
+    promocoes_ativas = RegraDesconto.objects.filter(ativo=True)
 
-    # Converter timezone.now() para date
     hoje = timezone.now().date()
 
-    # Criar DataFrame com Pandas
-    data = {
-        'Produto': [p.nome for p in produtos],
-        'Quantidade': [p.quantidade for p in produtos],
-        'Status': [
-            'Desperdício' if p.validade and p.validade < hoje else 'Estoque'
-            for p in produtos
-        ],
-    }
+    # Produtos doados (IDs)
+    produtos_doados_ids = doacoes.values_list('produto_id', flat=True)
+
+    # Produtos com promoção ativa (IDs)
+    produtos_promocao_ids = promocoes_ativas.values_list('produto_id', flat=True)
+
+    # Montar o relatório
+    data = []
+    for produto in produtos:
+        status = 'Estoque'
+
+        # Se o produto está vencido
+        if produto.validade and produto.validade < hoje:
+            # Se foi doado ou vendido com promoção ativa, não é desperdício
+            if produto.id in produtos_doados_ids:
+                status = 'Doado'
+            elif produto.id in produtos_promocao_ids:
+                status = 'Vendido com Desconto'
+            else:
+                status = 'Desperdício'
+
+        data.append({
+            'Produto': produto.nome,
+            'Quantidade': produto.quantidade,
+            'Status': status,
+        })
+
     df = pd.DataFrame(data)
 
-    # Gerar gráfico
+    # Gerar gráfico de status
     chart_data = df.groupby('Status').size().reset_index(name='Quantidade')
 
     context = {
         'chart_data': chart_data.to_dict('records'),
+        'tabela': df.to_dict('records'),
     }
     return render(request, 'relatorios/relatorio_desperdicio.html', context)
 
+
 def exportar_relatorio_csv(request):
     produtos = Produto.objects.all()
-    data = {
-        'Produto': [p.nome for p in produtos],
-        'Quantidade': [p.quantidade for p in produtos],
-        'Validade': [p.validade for p in produtos],
-    }
+    doacoes = Doacao.objects.all()
+    promocoes_ativas = RegraDesconto.objects.filter(ativo=True)
+
+    hoje = timezone.now().date()
+
+    produtos_doados_ids = doacoes.values_list('produto_id', flat=True)
+    produtos_promocao_ids = promocoes_ativas.values_list('produto_id', flat=True)
+
+    data = []
+    for produto in produtos:
+        status = 'Estoque'
+
+        if produto.validade and produto.validade < hoje:
+            if produto.id in produtos_doados_ids:
+                status = 'Doado'
+            elif produto.id in produtos_promocao_ids:
+                status = 'Vendido com Desconto'
+            else:
+                status = 'Desperdício'
+
+        data.append({
+            'Produto': produto.nome,
+            'Quantidade': produto.quantidade,
+            'Validade': produto.validade,
+            'Status': status,
+        })
+
     df = pd.DataFrame(data)
 
-    # Exportar para CSV
     buffer = BytesIO()
     df.to_csv(buffer, index=False)
     buffer.seek(0)
 
-    # Criar a resposta HTTP com o arquivo CSV
     response = HttpResponse(buffer, content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename="relatorio_produtos.csv"'
     return response
-
-
-'''
-código de trabalho futuro para melhorar a exebição de relatório :
-def relatorio_desperdicio(request):
-    produtos = Produto.objects.all()
-    doacoes = Doacao.objects.all()
-    promocoes = RegraDesconto.objects.filter(ativo=True)
-
-    hoje = timezone.now().date()
-
-    data = {
-        'Produto': [p.nome for p in produtos],
-        'Quantidade': [p.quantidade for p in produtos],
-        'Status': [
-            'Desperdício' if p.validade and p.validade < hoje and not (
-                Doacao.objects.filter(produto=p).exists() or
-                RegraDesconto.objects.filter(produto=p, ativo=True).exists()
-            ) else 'Estoque'
-            for p in produtos
-        ],
-    }
-    df = pd.DataFrame(data)
-
-    chart_data = df.groupby('Status').size().reset_index(name='Quantidade')
-
-    context = {
-        'chart_data': chart_data.to_dict('records'),
-    }
-    return render(request, 'relatorios/relatorio_desperdicio.html', context)
-
-'''

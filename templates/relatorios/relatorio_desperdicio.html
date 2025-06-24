@@ -2,11 +2,16 @@
 
 {% block content %}
 <h2>Relatório de Desperdício</h2>
+
+<!-- Gráfico -->
 <canvas id="desperdicioChart"></canvas>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
     const ctx = document.getElementById('desperdicioChart').getContext('2d');
     const chartData = {{ chart_data|safe }};
+
+    const cores = ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0']; // Cores para cada status
+
     new Chart(ctx, {
         type: 'pie',
         data: {
@@ -14,10 +19,34 @@
             datasets: [{
                 label: 'Quantidade',
                 data: chartData.map(item => item.Quantidade),
-                backgroundColor: ['#FF6384', '#36A2EB'],
+                backgroundColor: cores.slice(0, chartData.length),
             }]
         }
     });
 </script>
-<a href="{% url 'exportar_relatorio_csv' %}">Exportar para CSV</a>
+
+<!-- Botão de exportação -->
+<p><a href="{% url 'exportar_relatorio_csv' %}" class="btn btn-primary">Exportar para CSV</a></p>
+
+<!-- Tabela detalhada -->
+<h3>Detalhamento dos Produtos</h3>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Produto</th>
+            <th>Quantidade</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in tabela %}
+        <tr>
+            <td>{{ item.Produto }}</td>
+            <td>{{ item.Quantidade }}</td>
+            <td>{{ item.Status }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
 {% endblock %}
